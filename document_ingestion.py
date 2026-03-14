@@ -2,17 +2,12 @@ from langchain_community.document_loaders import (
     DirectoryLoader,
     UnstructuredFileLoader
 )
+from constants import DOC_DIR_PATH, VECTOR_DB_PATH, COLLECTION_NAME
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 import nltk
 nltk.download("punkt_tab")
-
-
-# Paths of directories
-DOC_DIR_PATH = "C:/Users/ravin/Ravindra/RAG - Langchain/RAG-Langchain/documents"
-VECTOR_DB_PATH = "C:/Users/ravin/Ravindra/RAG - Langchain/RAG-Langchain/vector-db"
-COLLECTION_NAME = "document_collection"
 
 
 # Initialize directory loader
